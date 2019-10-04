@@ -1,0 +1,71 @@
+{
+  "name": "@byu-oit/ts-oas-vue-router-gen",
+  "version": "0.0.0",
+  "description": "Generates the routes for the Vue-Router using a OpenAPI Specification document",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -t stylish --fix",
+    "build": "tsc",
+    "test": "nyc mocha -r ts-node/register ./test/**/*-test.ts",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byu-oit/ts-oas-vue-router-gen.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "OpenAPI",
+    "Specification",
+    "Vue",
+    "Router",
+    "Generate"
+  ],
+  "author": "Spencer Tuft <spencer_tuft@byu.edu>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/byu-oit/ts-oas-vue-router-gen/issues"
+  },
+  "homepage": "https://github.com/byu-oit/ts-oas-vue-router-gen#readme",
+  "devDependencies": {
+    "@airtasker/spot": "^0.2.18",
+    "@types/chai": "^4.2.3",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.6",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "source-map-support": "^0.5.13",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@types/vue-router": "^2.0.0",
+    "openapi-types": "^1.3.5",
+    "swagger-parser": "^8.0.1",
+    "vue": "^2.6.10"
+  }
+}

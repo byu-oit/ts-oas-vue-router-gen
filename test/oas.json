@@ -1,0 +1,37 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "0.0.0",
+    "title": "My API"
+  },
+  "paths": {
+    "/users": {
+      "get": {
+        "operationId": "fake",
+        "tags": [],
+        "parameters": [
+          {
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "name": "effectiveId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {},
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}
