@@ -1,6 +1,6 @@
 {
   "name": "@byu-oit/ts-oas-vue-router-gen",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Generates the routes for the Vue-Router using a OpenAPI Specification document",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
