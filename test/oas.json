@@ -7,7 +7,7 @@
   "paths": {
     "/users": {
       "get": {
-        "operationId": "fake",
+        "operationId": "Users",
         "tags": [],
         "parameters": [
           {
@@ -16,6 +16,34 @@
               "type": "string"
             },
             "name": "effectiveId"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {},
+            "description": ""
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "operationId": "UserProfile",
+        "tags": [],
+        "parameters": [
+          {
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "name": "id"
           }
         ],
         "responses": {
